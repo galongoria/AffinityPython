@@ -19,9 +19,9 @@ from requests.auth import HTTPBasicAuth
 # GLOBAL VARIABLES
 # ------------------------------------------------------ #
 
-api_key = ''
-daily_rate_limit = 150000
-endpoint_base = 'https://api.affinity.vc/'
+api_key = '6PXscWLcHtrHmpQPlu8hyMuaP4qHNN6CDJBU1XbKLaA'
+daily_rate_limit = 50000
+endpoint_base = 'https://api.affinity.co/'
 headers = {'Content-Type': 'application/json'}
 
 # ------------------------------------------------------ #
@@ -537,8 +537,8 @@ def get_relationship_strength(internal_id, external_id):
 
 def check_err(r):
     if r.status_code != 200:
-        print "Error:",r.status_code
-        print r.text
+        print(f'Error: {r.status_code}')
+        print(r.text)
         return True
     else:
         return False
